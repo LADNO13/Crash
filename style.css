@@ -1,0 +1,157 @@
+body {
+    background-color: #1f1e25;
+    color: white;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+}
+
+#gameContainer {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#game {
+    width: 100%; /* Растягиваем canvas на всю ширину экрана */
+    height: 400px; /* Высота будет автоматически вычисляться исходя из соотношения сторон */
+    background-color: #2c2b33;
+    border-radius: 20px;
+    display: block; /* Чтобы canvas располагался как блочный элемент */
+}
+
+#currentMultiplier {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 50px;
+}
+
+#infoContainer {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+#balance {
+    color: lime;
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+#crashedAt {
+    margin-right: 5px;
+}
+
+#betContainer {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+#betContainer label {
+    margin-right: 5px;
+}
+
+#betAmount {
+    padding: 8px 8px;
+    border-radius: 5px;
+}
+
+.betInput{
+    padding: 20px;
+    width: 100%;
+}
+
+#buttonContainer {
+    margin-bottom: 10px;
+    background-color: #2c2b33;
+    padding: 15px 40px;
+    border-radius: 10px;
+}
+
+.bet{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px; ;
+    margin-bottom: 10px;
+    padding: 0 20px;
+}
+
+.buttons{
+    text-align: center;
+}
+
+#submitBet,
+#takeProfits {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #4caf50;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#submitBet:hover,
+#takeProfits:hover {
+    background-color: #45a049;
+}
+
+
+
+#lastCrashesContainer p {
+    font-weight: bold;
+}
+
+#lastCrashes {
+    margin-top: 5px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+#lastCrashes p {
+    padding: 15px;   
+    background-color: #2c2b33;
+    border-radius: 5px;
+}
+
+@media screen and (min-width: 1440px) {
+    
+    #game {
+        width: 1440px;
+        margin: 0 auto;
+    }
+
+}
+
+@media screen and (max-width: 768px) {  
+
+    #game { 
+        height: 300px;
+    }
+
+}
+
+
+
+@media screen and (max-width: 425px) {  
+
+    #game { 
+        height: 250px;
+    }
+
+}
